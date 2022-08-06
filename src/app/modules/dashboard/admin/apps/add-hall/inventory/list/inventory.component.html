@@ -9,7 +9,7 @@
             <mat-progress-bar [mode]="'indeterminate'"></mat-progress-bar>
         </div>
         <!-- Title -->
-        <div class="text-4xl font-extrabold tracking-tight">{{('Hall' | transloco)}}</div>
+        <div class="text-4xl font-extrabold tracking-tight">{{('ShowRoom' | transloco)}}</div>
         <!-- Actions -->
         <div class="flex shrink-0 items-center mt-6 sm:mt-0 sm:ml-4">
             <!-- Search -->
@@ -22,7 +22,7 @@
                     matInput
                     [formControl]="searchInputControl"
                     [autocomplete]="'off'"
-                    [placeholder]="'Searchproduct' | transloco ">
+                    [placeholder]="'Searchshowroom' | transloco ">
             </mat-form-field>
             <!-- Add product button -->
             <button
@@ -31,7 +31,7 @@
                 [color]="'primary'"
                 (click)="createProduct()">
                 <mat-icon [svgIcon]="'heroicons_outline:plus'"></mat-icon>
-                <span class="ml-2 mr-1">{{('AddHall' | transloco)}}</span>
+                <span class="ml-2 mr-1">{{('AddShowroom' | transloco)}}</span>
             </button>
         </div>
     </div>
@@ -50,7 +50,7 @@
                             matSort
                             matSortDisableClear>
                             <div></div>
-                            <div [mat-sort-header]="'name'">{{('NameHall'| transloco)}}</div>
+                            <div [mat-sort-header]="'name'">{{('NameShowroom'| transloco)}}</div>
                             <div
                                 class="hidden sm:block"
                                 [mat-sort-header]="'governorate'">
@@ -92,6 +92,7 @@
                                       <div class="hidden md:block truncate">
                                         {{product.contact}}
                                     </div>
+
 
                                     <!-- address -->
                                     <div class="hidden lg:flex items-center truncate">
@@ -149,7 +150,7 @@
 
                                         <!-- Name -->
                                         <mat-form-field class="w-full">
-                                            <mat-label>{{('NameHall' | transloco)}}</mat-label>
+                                            <mat-label>{{('NameShowRoom' | transloco)}}</mat-label>
                                             <input
                                                 matInput
                                                 [formControlName]="'name'">
@@ -157,7 +158,7 @@
 
                                         <!-- SKU and Barcode -->
                                         <div class="flex">
-                                            <mat-form-field class="w-1/3 pr-2">
+                                            <mat-form-field class="w-full">
                                                 <mat-label>{{('Address'|transloco)}}</mat-label>
                                                 <input
                                                     matInput
@@ -187,28 +188,37 @@
                                                     </ng-container>
                                                 </mat-select>
                                             </mat-form-field>
-                                            <div class="w-1/3 px-2 pb-3 pt-6">
+                                            <mat-form-field class="w-1/3 pr-2">
+                                                <mat-label>{{('Totalspace'|transloco)}}</mat-label>
+                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <input
+                                                    matInput
+                                                    [formControlName]="'totalspace'">
+                                            </mat-form-field>
+                                            <mat-form-field class="w-1/3 pl-2">
+                                                <mat-label>{{('Width'| transloco)}}</mat-label>
+                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <input
+                                                    matInput
+                                                    [formControlName]="'width'">
+                                            </mat-form-field>
+                                            <mat-form-field class="w-1/3 pl-2">
+                                                <mat-label>{{('Height'| transloco)}}</mat-label>
+                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <input
+                                                    matInput
+                                                    [formControlName]="'height'">
+                                            </mat-form-field>
+                                            <!-- <div class="w-1/3 px-2 pb-3 pt-6">
                                                 <button class="bg-slate-500" mat-button  (click)="openDialog()">{{('Coordinates'| transloco)}}</button>
-                                            </div>
+                                            </div> -->
+
                                         </div>
 
                                         <!-- Stock and Reserved -->
-                                        <div class="flex">
-                                            <mat-form-field class="w-1/3 pr-2">
-                                                <mat-label>{{('Spacetotle'|transloco)}}</mat-label>
-                                                <input
-                                                    type="number"
-                                                    matInput
-                                                    [formControlName]="'spacetotle'">
-                                            </mat-form-field>
-                                            <mat-form-field class="w-1/3 pl-2">
-                                                <mat-label>{{('Avgsales'| transloco)}}</mat-label>
-                                                <input
-                                                    type="number"
-                                                    matInput
-                                                    [formControlName]="'avgsales'">
-                                            </mat-form-field>
-                                        </div>
+                                        <!-- <div class="flex">
+
+                                        </div> -->
                                     </div>
 
                                 </div>

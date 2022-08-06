@@ -53,8 +53,8 @@
                             <div class="hidden md:block" [mat-sort-header]="'name'">{{'NameGoods'| transloco}}</div>
                             <div
                                 class="hidden sm:block"
-                                [mat-sort-header]="'price'">
-                                {{'Price' | transloco}}
+                                [mat-sort-header]="'profitratio'">
+                                {{'ProfitRatio' | transloco}}
                             </div>
                             <div
                                 class="hidden lg:block"
@@ -99,7 +99,7 @@
 
                                     <!-- Price -->
                                     <div class="hidden sm:block truncate">
-                                        {{product.price | currency:'USD':'symbol':'1.2-2'}}
+                                        {{product.profitratio | currency:'USD':'symbol':'1.2-2'}}
                                     </div>
 
                                     <!-- Stock -->
@@ -269,29 +269,25 @@
                                     <div class="flex flex-col w-full lg:w-1/4 sm:pl-8">
                                         <mat-form-field class="w-full">
                                             <mat-label>{{'Cost' | transloco}}</mat-label>
-                                            <span matSuffix> {{'PS' | transloco}} </span>
+                                            <span matSuffix> {{'SP' | transloco}} </span>
                                             <input
                                                 matInput
                                                 [formControlName]="'cost'">
                                         </mat-form-field>
                                         <mat-form-field class="w-full">
                                             <mat-label>{{'ProfitRatio' | transloco}}</mat-label>
-                                            <span matSuffix> {{'PS' | transloco}} </span>
+                                            <span matSuffix> {{'SP' | transloco}} </span>
                                             <input
                                                 matInput
                                                 [formControlName]="'profitratio'">
                                         </mat-form-field>
                                         <mat-form-field class="w-full">
-                                            <mat-label>{{'Price' | transloco}}</mat-label>
-                                            <span matSuffix> {{'PS' | transloco}} </span>
+                                            <mat-label>{{'Size' | transloco}}</mat-label>
+                                            <span matSuffix> {{'sm' | transloco}} </span>
                                             <input
                                                 matInput
-                                                [formControlName]="'price'">
+                                                [formControlName]="'boxsize'">
                                         </mat-form-field>
-                                    </div>
-
-                                    <!-- Weight & Tags -->
-                                    <div class="flex flex-col w-full lg:w-1/4 sm:pl-8">
                                         <mat-form-field class="w-full">
                                             <mat-label>{{'Weight' | transloco}}</mat-label>
                                             <span matSuffix> {{'lbs.' | transloco}} </span>
@@ -299,6 +295,11 @@
                                                 matInput
                                                 [formControlName]="'boxweight'">
                                         </mat-form-field>
+                                    </div>
+
+                                    <!-- Weight & Tags -->
+                                    <div class="flex flex-col w-full lg:w-1/4 sm:pl-8">
+
                                         <mat-form-field class="w-full">
                                             <mat-label>{{'Height' | transloco}}</mat-label>
                                             <span matSuffix> {{'sm' | transloco}} </span>
@@ -312,13 +313,6 @@
                                             <input
                                                 matInput
                                                 [formControlName]="'width'">
-                                        </mat-form-field>
-                                        <mat-form-field class="w-full">
-                                            <mat-label>{{'Size' | transloco}}</mat-label>
-                                            <span matSuffix> {{'sm' | transloco}} </span>
-                                            <input
-                                                matInput
-                                                [formControlName]="'boxsize'">
                                         </mat-form-field>
 
                                         <!-- Tags -->
