@@ -35,7 +35,7 @@ let object = {
         password : '123456',
         address : 'homs-123',
         phone :'0936824841',
-        'image' :'file' ,
+        image :'file' ,
 }
 return this.http.post('http://127.0.0.1:8000/api/users/' + id, object)
 
