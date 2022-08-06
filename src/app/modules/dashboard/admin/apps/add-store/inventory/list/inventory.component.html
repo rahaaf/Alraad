@@ -158,7 +158,7 @@
 
                                         <!-- SKU and Barcode -->
                                         <div class="flex">
-                                            <mat-form-field class="w-1/3 pr-2">
+                                            <mat-form-field class="w-full">
                                                 <mat-label>{{('Address'|transloco)}}</mat-label>
                                                 <input
                                                     matInput
@@ -188,13 +188,34 @@
                                                     </ng-container>
                                                 </mat-select>
                                             </mat-form-field>
-                                            <div class="w-1/3 px-2 pb-3 pt-6">
+                                            <mat-form-field class="w-1/3 pr-2">
+                                                <mat-label>{{('Totalspace'|transloco)}}</mat-label>
+                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <input
+                                                    matInput
+                                                    [formControlName]="'totalspace'">
+                                            </mat-form-field>
+                                            <mat-form-field class="w-1/3 pl-2">
+                                                <mat-label>{{('Width'| transloco)}}</mat-label>
+                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <input
+                                                    matInput
+                                                    [formControlName]="'width'">
+                                            </mat-form-field>
+                                            <mat-form-field class="w-1/3 pl-2">
+                                                <mat-label>{{('Height'| transloco)}}</mat-label>
+                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <input
+                                                    matInput
+                                                    [formControlName]="'height'">
+                                            </mat-form-field>
+                                            <!-- <div class="w-1/3 px-2 pb-3 pt-6">
                                                 <button class="bg-slate-500" mat-button  (click)="openDialog()">{{('Coordinates'| transloco)}}</button>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                         <!-- Spacetotle and Avgsales -->
-                                        <div class="flex">
+                                        <!-- <div class="flex">
                                             <mat-form-field class="w-1/3 pr-2">
                                                 <mat-label>{{('Spacetotle'|transloco)}}</mat-label>
                                                 <input
@@ -209,7 +230,7 @@
                                                     matInput
                                                     [formControlName]="'avgsales'">
                                             </mat-form-field>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 

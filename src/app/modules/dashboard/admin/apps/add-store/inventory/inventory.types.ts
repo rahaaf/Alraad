@@ -6,8 +6,9 @@ export interface InventoryProduct
     name: string;
     address: string;
     coordinates: number;
-    spacetotle: number;
-    avgsales: number;
+    totalspace: number;
+    width: number;
+    height: number;
 }
 
 export interface InventoryPagination
