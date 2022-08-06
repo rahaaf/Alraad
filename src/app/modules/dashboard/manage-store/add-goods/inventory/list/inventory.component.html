@@ -231,14 +231,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex flex-col mt-8">
+                                    <!-- <div class="flex flex-col mt-8">
                                         <span class="font-semibold mb-2">{{'Productstatus' | transloco}}</span>
                                         <mat-slide-toggle
                                             [formControlName]="'active'"
                                             [color]="'primary'">
                                             {{selectedProductForm.get('active').value === true ? 'Active' : 'Disabled'}}
                                         </mat-slide-toggle>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="flex flex-auto flex-wrap">
@@ -269,21 +269,21 @@
                                     <div class="flex flex-col w-full lg:w-1/4 sm:pl-8">
                                         <mat-form-field class="w-full">
                                             <mat-label>{{'Cost' | transloco}}</mat-label>
-                                            <span matPrefix> {{'$' | transloco}} </span>
+                                            <span matSuffix> {{'PS' | transloco}} </span>
                                             <input
                                                 matInput
                                                 [formControlName]="'cost'">
                                         </mat-form-field>
                                         <mat-form-field class="w-full">
-                                            <mat-label>{{'BasePrice' | transloco}}</mat-label>
-                                            <span matPrefix> {{'$' | transloco}} </span>
+                                            <mat-label>{{'ProfitRatio' | transloco}}</mat-label>
+                                            <span matSuffix> {{'PS' | transloco}} </span>
                                             <input
                                                 matInput
-                                                [formControlName]="'basePrice'">
+                                                [formControlName]="'profitratio'">
                                         </mat-form-field>
                                         <mat-form-field class="w-full">
                                             <mat-label>{{'Price' | transloco}}</mat-label>
-                                            <span matSuffix> {{'$' | transloco}} </span>
+                                            <span matSuffix> {{'PS' | transloco}} </span>
                                             <input
                                                 matInput
                                                 [formControlName]="'price'">
@@ -297,7 +297,7 @@
                                             <span matSuffix> {{'lbs.' | transloco}} </span>
                                             <input
                                                 matInput
-                                                [formControlName]="'weight'">
+                                                [formControlName]="'boxweight'">
                                         </mat-form-field>
                                         <mat-form-field class="w-full">
                                             <mat-label>{{'Height' | transloco}}</mat-label>
@@ -313,9 +313,16 @@
                                                 matInput
                                                 [formControlName]="'width'">
                                         </mat-form-field>
+                                        <mat-form-field class="w-full">
+                                            <mat-label>{{'Size' | transloco}}</mat-label>
+                                            <span matSuffix> {{'sm' | transloco}} </span>
+                                            <input
+                                                matInput
+                                                [formControlName]="'boxsize'">
+                                        </mat-form-field>
 
                                         <!-- Tags -->
-                                        <span class="mb-px font-medium leading-tight">{{'Tags' | transloco}}</span>
+                                        <span class="mb-px font-medium leading-tight">{{'Type' | transloco}}</span>
                                         <div class="mt-1.5 rounded-md border border-gray-300 dark:border-gray-500 shadow-sm overflow-hidden">
                                             <!-- Header -->
                                             <div class="flex items-center -my-px py-2 px-3">
@@ -326,7 +333,7 @@
                                                     <input
                                                         class="min-w-0 ml-2 py-1 border-0"
                                                         type="text"
-                                                        placeholder="Enter tag name"
+                                                        placeholder="Enter type name"
                                                         (input)="filterTags($event)"
                                                         (keydown)="filterTagsInputKeyDown($event)"
                                                         [maxLength]="50"
@@ -351,13 +358,13 @@
                                                 <!-- Tags -->
                                                 <ng-container *ngIf="!tagsEditMode">
                                                     <ng-container *ngFor="let tag of filteredTags; trackBy: trackByFn">
-                                                        <mat-checkbox
+                                                        <mat-radio-button
                                                             class="flex items-center h-10 min-h-10 px-4"
                                                             [color]="'primary'"
-                                                            [checked]="selectedProduct.tags.includes(tag.id)"
-                                                            (change)="toggleProductTag(tag, $event)">
+                                                            [value]="selectedProduct.types"
+                                                            (change)="toggleProductTag(tag,$event)">
                                                             {{tag.title}}
-                                                        </mat-checkbox>
+                                                        </mat-radio-button>
                                                     </ng-container>
                                                 </ng-container>
                                                 <!-- Tags editing -->

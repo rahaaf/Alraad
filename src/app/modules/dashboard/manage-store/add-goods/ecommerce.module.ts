@@ -12,6 +12,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatRadioModule} from '@angular/material/radio';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SharedModule } from 'app/shared/shared.module';
 import { InventoryComponent } from 'app/modules/dashboard/manage-store/add-goods/inventory/inventory.component';
@@ -40,6 +41,7 @@ import { TranslocoModule } from '@ngneat/transloco';
         MatSlideToggleModule,
         MatTooltipModule,
         TranslocoModule,
+        MatRadioModule,
         SharedModule
     ]
 })

@@ -8,6 +8,7 @@ import { fuseAnimations } from '@fuse/animations';
 import { FuseConfirmationService } from '@fuse/services/confirmation';
 import {InventoryPagination, InventoryProduct, InventoryTag} from 'app/modules/dashboard/manage-store/add-goods/inventory/inventory.types';
 import { InventoryService } from 'app/modules/dashboard/manage-store/add-goods/inventory/inventory.service';
+import { MatRadioChange } from '@angular/material/radio';
 
 @Component({
     selector       : 'inventory-list',
@@ -81,15 +82,15 @@ export class InventoryListComponent implements OnInit, AfterViewInit, OnDestroy
             id               : [''],
             idstor           : [''],
             name             : ['', [Validators.required]],
-            tags             : [[]],
+            types             : [[]],
             height           : [''],
             width            : [''],
             stock            : [''],
             cost             : [''],
-            basePrice        : [''],
+            profitratio        : [''],
             price            : [''],
-            weight           : [''],
-            thumbnail        : [''],
+            boxweight           : [''],
+            boxsize          : [''],
             images           : [''],
             active           : [false]
         });
@@ -308,7 +309,7 @@ export class InventoryListComponent implements OnInit, AfterViewInit, OnDestroy
 
         // If there is a tag...
         const tag = this.filteredTags[0];
-        const isTagApplied = this.selectedProduct.tags.find(id => id === tag.id);
+        const isTagApplied = this.selectedProduct.types.find(id => id === tag.id);
 
         // If the found tag is already applied to the product...
         if ( isTagApplied )
@@ -385,10 +386,10 @@ export class InventoryListComponent implements OnInit, AfterViewInit, OnDestroy
     addTagToProduct(tag: InventoryTag): void
     {
         // Add the tag
-        this.selectedProduct.tags.unshift(tag.id);
+        this.selectedProduct.types.unshift(tag.id);
 
         // Update the selected product form
-        this.selectedProductForm.get('tags').patchValue(this.selectedProduct.tags);
+        this.selectedProductForm.get('types').patchValue(this.selectedProduct.types);
 
         // Mark for check
         this._changeDetectorRef.markForCheck();
@@ -402,10 +403,10 @@ export class InventoryListComponent implements OnInit, AfterViewInit, OnDestroy
     removeTagFromProduct(tag: InventoryTag): void
     {
         // Remove the tag
-        this.selectedProduct.tags.splice(this.selectedProduct.tags.findIndex(item => item === tag.id), 1);
+        this.selectedProduct.types.splice(this.selectedProduct.types.findIndex(item => item === tag.id), 1);
 
         // Update the selected product form
-        this.selectedProductForm.get('tags').patchValue(this.selectedProduct.tags);
+        this.selectedProductForm.get('tags').patchValue(this.selectedProduct.types);
 
         // Mark for check
         this._changeDetectorRef.markForCheck();
@@ -417,9 +418,9 @@ export class InventoryListComponent implements OnInit, AfterViewInit, OnDestroy
      * @param tag
      * @param change
      */
-    toggleProductTag(tag: InventoryTag, change: MatCheckboxChange): void
+    toggleProductTag(tag: InventoryTag, change: MatRadioChange): void
     {
-        if ( change.checked )
+        if ( change.value )
         {
             this.addTagToProduct(tag);
         }

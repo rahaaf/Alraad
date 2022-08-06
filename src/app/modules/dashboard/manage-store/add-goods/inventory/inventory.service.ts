@@ -310,12 +310,12 @@ export class InventoryService
                         // Iterate through the contacts
                         products.forEach((product) => {
 
-                            const tagIndex = product.tags.findIndex(tag => tag === id);
+                            const tagIndex = product.types.findIndex(tag => tag === id);
 
                             // If the contact has the tag, remove it
                             if ( tagIndex > -1 )
                             {
-                                product.tags.splice(tagIndex, 1);
+                                product.types.splice(tagIndex, 1);
                             }
                         });
 

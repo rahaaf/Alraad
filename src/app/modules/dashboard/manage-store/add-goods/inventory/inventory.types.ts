@@ -3,15 +3,15 @@ export interface InventoryProduct
     id: string;
     idstor: string;
     name: string;
-    tags?: string[];
+    types?: string[];
     hieght?: number | null;
     width?: number | null;
     stock: number;
     cost: number;
-    basePrice: number;
+    profitratio: number;
     price: number;
-    weight: number;
-    thumbnail: string;
+    boxweight: number;
+    boxsize: number;
     images: string;
     active: boolean;
 }
