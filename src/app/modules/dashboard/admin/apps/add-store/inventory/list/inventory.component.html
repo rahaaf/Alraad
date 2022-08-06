@@ -50,7 +50,7 @@
                             matSort
                             matSortDisableClear>
                             <div></div>
-                            <div class="hidden md:block" [mat-sort-header]="'name'">{{('NameStore'|transloco)}}</div>
+                            <div class="hidden md:block" [mat-sort-header]="'name'">{{('Name Store'|transloco)}}</div>
                             <div
                                 class="hidden sm:block"
                                 [mat-sort-header]="'governorate'">
@@ -150,7 +150,7 @@
 
                                         <!-- Name -->
                                         <mat-form-field class="w-full">
-                                            <mat-label>{{('NameStore'|transloco)}}</mat-label>
+                                            <mat-label>{{('Name Store'|transloco)}}</mat-label>
                                             <input
                                                 matInput
                                                 [formControlName]="'name'">
@@ -189,25 +189,25 @@
                                                 </mat-select>
                                             </mat-form-field>
                                             <mat-form-field class="w-1/3 pr-2">
-                                                <mat-label>{{('Totalspace'|transloco)}}</mat-label>
+                                                <mat-label>{{('Total space'|transloco)}}</mat-label>
                                                 <span matSuffix> {{'sm' | transloco}} </span>
                                                 <input
                                                     matInput
                                                     [formControlName]="'totalspace'">
                                             </mat-form-field>
                                             <mat-form-field class="w-1/3 pl-2">
-                                                <mat-label>{{('Width'| transloco)}}</mat-label>
-                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <mat-label>{{('Longitude'| transloco)}}</mat-label>
+                                                <!-- <span matSuffix> {{'sm' | transloco}} </span> -->
                                                 <input
                                                     matInput
-                                                    [formControlName]="'width'">
+                                                    [formControlName]="'longitude'">
                                             </mat-form-field>
                                             <mat-form-field class="w-1/3 pl-2">
-                                                <mat-label>{{('Height'| transloco)}}</mat-label>
-                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <mat-label>{{('Latitude'| transloco)}}</mat-label>
+                                                <!-- <span matSuffix> {{'sm' | transloco}} </span> -->
                                                 <input
                                                     matInput
-                                                    [formControlName]="'height'">
+                                                    [formControlName]="'latitude'">
                                             </mat-form-field>
                                             <!-- <div class="w-1/3 px-2 pb-3 pt-6">
                                                 <button class="bg-slate-500" mat-button  (click)="openDialog()">{{('Coordinates'| transloco)}}</button>

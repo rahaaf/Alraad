@@ -7,8 +7,8 @@ export interface InventoryProduct
     address: string;
     coordinates: number;
     totalspace: number;
-    width: number;
-    height: number;
+    longitude: number;
+    latitude: number;
 }
 
 export interface InventoryPagination

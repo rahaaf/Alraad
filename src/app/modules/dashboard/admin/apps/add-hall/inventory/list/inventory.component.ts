@@ -94,8 +94,8 @@ export class InventoryListComponent implements OnInit, AfterViewInit, OnDestroy
             address          : [''],
             coordinates      : [''],
             totalspace       : [''],
-            width            : [''],
-            height           :['']
+            longitude        : [''],
+            latitude         :['']
         });
 
         // Get the Coordinates

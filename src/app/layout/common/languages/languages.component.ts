@@ -158,7 +158,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
         const analyticsDashboardItem = this._fuseNavigationService.getItem('apps.store.add-store', navigation);
         if ( analyticsDashboardItem )
         {
-            this._translocoService.selectTranslate('AddStore').pipe(take(1))
+            this._translocoService.selectTranslate('Stores').pipe(take(1))
                 .subscribe((translation) => {
 
                     // Set the title
@@ -172,7 +172,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
            const analyticsHallItem = this._fuseNavigationService.getItem('apps.add-hall.hallhouse', navigation);
            if (analyticsHallItem)
            {
-               this._translocoService.selectTranslate('ShowRoom').pipe(take(1))
+               this._translocoService.selectTranslate('ShowRooms').pipe(take(1))
                    .subscribe((translation) => {
                        // Set the title
                        analyticsHallItem.title = translation;
@@ -183,7 +183,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
         const contactsDashboardItem = this._fuseNavigationService.getItem('apps.contacts', navigation);
         if ( contactsDashboardItem )
         {
-            this._translocoService.selectTranslate('Emploies').pipe(take(1))
+            this._translocoService.selectTranslate('Employees').pipe(take(1))
                 .subscribe((translation) => {
 
                     // Set the title

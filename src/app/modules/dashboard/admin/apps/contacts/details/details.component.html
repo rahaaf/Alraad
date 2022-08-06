@@ -79,7 +79,7 @@
                     <!-- Name -->
                     <div class="mt-8">
                         <mat-form-field class="fuse-mat-no-subscript w-full">
-                            <mat-label>{{'NameContact' | transloco }}</mat-label>
+                            <mat-label>{{'NameEmployee' | transloco }}</mat-label>
                             <mat-icon
                                 matPrefix
                                 class="hidden sm:flex icon-size-5"
@@ -97,7 +97,7 @@
                             <ng-container *ngFor="let email of contactForm.get('emails')['controls']; let i = index; let first = first; let last = last; trackBy: trackByFn">
                                 <div class="flex">
                                     <mat-form-field class="fuse-mat-no-subscript flex-auto">
-                                        <mat-label *ngIf="first">{{'EmailContact' | transloco}}</mat-label>
+                                        <mat-label *ngIf="first">{{'EmailEmployee' | transloco}}</mat-label>
                                         <mat-icon
                                             matPrefix
                                             class="hidden sm:flex icon-size-5"
@@ -108,7 +108,7 @@
                                             [placeholder]="'Emailaddress' | transloco"
                                             [spellcheck]="false">
                                     </mat-form-field>
-                                    <mat-form-field class="fuse-mat-no-subscript flex-auto w-full max-w-24 sm:max-w-40 ml-2 sm:ml-4">
+                                    <!-- <mat-form-field class="fuse-mat-no-subscript flex-auto w-full max-w-24 sm:max-w-40 ml-2 sm:ml-4">
                                         <mat-label *ngIf="first">{{'Label' | transloco}}</mat-label>
                                         <mat-icon
                                             matPrefix
@@ -118,9 +118,9 @@
                                             matInput
                                             [formControl]="email.get('label')"
                                             [placeholder]="'Label' | transloco">
-                                    </mat-form-field>
+                                    </mat-form-field> -->
                                     <!-- Remove email -->
-                                    <ng-container *ngIf="!(first && last)">
+                                    <!-- <ng-container *ngIf="!(first && last)">
                                         <div
                                             class="flex items-center w-10 pl-2"
                                             [ngClass]="{'mt-6': first}">
@@ -134,18 +134,25 @@
                                                     [svgIcon]="'heroicons_solid:trash'"></mat-icon>
                                             </button>
                                         </div>
-                                    </ng-container>
+                                    </ng-container> -->
                                 </div>
+                                <mat-form-field class="w-full">
+                                    <mat-label>{{'Password' | transloco}}</mat-label>
+                                    <input
+                                        type="password"
+                                        matInput
+                                        [formControlName]="'password'">
+                                </mat-form-field>
                             </ng-container>
                         </div>
-                        <div
+                        <!-- <div
                             class="group inline-flex items-center mt-2 -ml-4 py-2 px-4 rounded cursor-pointer"
                             (click)="addEmailField()">
                             <mat-icon
                                 class="icon-size-5"
                                 [svgIcon]="'heroicons_solid:plus-circle'"></mat-icon>
                             <span class="ml-2 font-medium text-secondary group-hover:underline">{{'Addanemailaddress' | transloco}}</span>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Phone numbers -->
@@ -188,7 +195,7 @@
                                             </ng-container>
                                         </mat-select>
                                     </mat-form-field>
-                                    <mat-form-field class="fuse-mat-no-subscript flex-auto w-full max-w-24 sm:max-w-40 ml-2 sm:ml-4">
+                                    <!-- <mat-form-field class="fuse-mat-no-subscript flex-auto w-full max-w-24 sm:max-w-40 ml-2 sm:ml-4">
                                         <mat-label *ngIf="first">{{'Label' | transloco}}</mat-label>
                                         <mat-icon
                                             matPrefix
@@ -198,9 +205,9 @@
                                             matInput
                                             [formControl]="phoneNumber.get('label')"
                                             [placeholder]="'Label' | transloco">
-                                    </mat-form-field>
+                                    </mat-form-field> -->
                                     <!-- Remove phone number -->
-                                    <ng-container *ngIf="!(first && last)">
+                                    <!-- <ng-container *ngIf="!(first && last)">
                                         <div
                                             class="flex items-center w-10 pl-2"
                                             [ngClass]="{'mt-6': first}">
@@ -214,18 +221,18 @@
                                                     [svgIcon]="'heroicons_solid:trash'"></mat-icon>
                                             </button>
                                         </div>
-                                    </ng-container>
+                                    </ng-container> -->
                                 </div>
                             </ng-container>
                         </div>
-                        <div
+                        <!-- <div
                             class="group inline-flex items-center mt-2 -ml-4 py-2 px-4 rounded cursor-pointer"
                             (click)="addPhoneNumberField()">
                             <mat-icon
                                 class="icon-size-5"
                                 [svgIcon]="'heroicons_solid:plus-circle'"></mat-icon>
                             <span class="ml-2 font-medium text-secondary group-hover:underline">{{'Addaphonenumber'| transloco}}</span>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Address -->
@@ -250,7 +257,7 @@
                             [color]="'warn'"
                             [matTooltip]
                             (click)="deleteContact()">
-                            {{'DeleteContact' | transloco}}
+                            {{'DeleteEmployee' | transloco}}
                         </button>
                         <!-- Cancel -->
                         <button

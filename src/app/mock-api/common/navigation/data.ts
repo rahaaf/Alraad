@@ -11,21 +11,21 @@ export const defaultNavigation: FuseNavigationItem[] = [
         children: [
             {
                 id   : 'apps.store.add-store',
-                title: 'Addstore',
+                title: 'Stores',
                 type : 'basic',
                 link : '/apps/store/add-store',
                 icon    : 'mat_outline:storefront',
             },
             {
                 id   : 'apps.add-hall.hallhouse',
-                title: 'ShowRoom',
+                title: 'ShowRooms',
                 type : 'basic',
                 link : '/apps/add-hall/hall',
                 icon    : 'mat_outline:add_business',
             },
             {
                 id   : 'apps.contacts',
-                title: 'Emploies',
+                title: 'Employees',
                 type : 'basic',
                 icon : 'heroicons_outline:user-group',
                 link : '/apps/contacts'

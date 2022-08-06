@@ -31,7 +31,7 @@
                 [color]="'primary'"
                 (click)="createProduct()">
                 <mat-icon [svgIcon]="'heroicons_outline:plus'"></mat-icon>
-                <span class="ml-2 mr-1">{{('AddShowroom' | transloco)}}</span>
+                <span class="ml-2 mr-1">{{('Add Showroom' | transloco)}}</span>
             </button>
         </div>
     </div>
@@ -50,7 +50,7 @@
                             matSort
                             matSortDisableClear>
                             <div></div>
-                            <div [mat-sort-header]="'name'">{{('NameShowroom'| transloco)}}</div>
+                            <div [mat-sort-header]="'name'">{{('Name Showroom'| transloco)}}</div>
                             <div
                                 class="hidden sm:block"
                                 [mat-sort-header]="'governorate'">
@@ -150,7 +150,7 @@
 
                                         <!-- Name -->
                                         <mat-form-field class="w-full">
-                                            <mat-label>{{('NameShowRoom' | transloco)}}</mat-label>
+                                            <mat-label>{{('Name ShowRoom' | transloco)}}</mat-label>
                                             <input
                                                 matInput
                                                 [formControlName]="'name'">
@@ -196,18 +196,18 @@
                                                     [formControlName]="'totalspace'">
                                             </mat-form-field>
                                             <mat-form-field class="w-1/3 pl-2">
-                                                <mat-label>{{('Width'| transloco)}}</mat-label>
-                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <mat-label>{{('Longitude'| transloco)}}</mat-label>
+                                                <!-- <span matSuffix> {{'sm' | transloco}} </span> -->
                                                 <input
                                                     matInput
-                                                    [formControlName]="'width'">
+                                                    [formControlName]="'longitude'">
                                             </mat-form-field>
                                             <mat-form-field class="w-1/3 pl-2">
-                                                <mat-label>{{('Height'| transloco)}}</mat-label>
-                                                <span matSuffix> {{'sm' | transloco}} </span>
+                                                <mat-label>{{('Latitude'| transloco)}}</mat-label>
+                                                <!-- <span matSuffix> {{'sm' | transloco}} </span> -->
                                                 <input
                                                     matInput
-                                                    [formControlName]="'height'">
+                                                    [formControlName]="'latitude'">
                                             </mat-form-field>
                                             <!-- <div class="w-1/3 px-2 pb-3 pt-6">
                                                 <button class="bg-slate-500" mat-button  (click)="openDialog()">{{('Coordinates'| transloco)}}</button>

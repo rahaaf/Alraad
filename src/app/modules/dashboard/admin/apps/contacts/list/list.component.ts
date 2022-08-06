@@ -22,7 +22,7 @@ export class ContactsListComponent implements OnInit, OnDestroy
     contacts$: Observable<Contact[]>;
 
     contactsCount: number = 0;
-    contactsTableColumns: string[] = ['name', 'email', 'phoneNumber', 'job'];
+    contactsTableColumns: string[] = ['name', 'email', 'phoneNumber','password'];
     countries: Country[];
     drawerMode: 'side' | 'over';
     searchInputControl: FormControl = new FormControl();

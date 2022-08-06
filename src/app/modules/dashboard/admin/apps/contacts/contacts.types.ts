@@ -14,6 +14,7 @@ export interface Contact
         label: string;
     }[];
     address?: string | null;
+    password: string| number;
 }
 
 export interface Country

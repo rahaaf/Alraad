@@ -64,6 +64,7 @@ export class ContactsDetailsComponent implements OnInit, OnDestroy
             emails      : this._formBuilder.array([]),
             phoneNumbers: this._formBuilder.array([]),
             address     : [null],
+            password    : ['',[Validators.required]]
         });
 
         // Get the contacts
