@@ -172,7 +172,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
            const analyticsHallItem = this._fuseNavigationService.getItem('apps.add-hall.hallhouse', navigation);
            if (analyticsHallItem)
            {
-               this._translocoService.selectTranslate('Hallhouse').pipe(take(1))
+               this._translocoService.selectTranslate('ShowRoom').pipe(take(1))
                    .subscribe((translation) => {
                        // Set the title
                        analyticsHallItem.title = translation;

@@ -18,7 +18,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
             },
             {
                 id   : 'apps.add-hall.hallhouse',
-                title: 'Hallhouse',
+                title: 'ShowRoom',
                 type : 'basic',
                 link : '/apps/add-hall/hall',
                 icon    : 'mat_outline:add_business',
